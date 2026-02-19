@@ -59,9 +59,10 @@ ol {
   /* Error */
   --error-500: #ef4444;
 
-  --outline-width: 2px;
+  --outline-width: 1px;
 
   --max-width: 1280px;
+
 }
 
 @media (min-width: 768px) {
@@ -83,10 +84,22 @@ ol {
   }
 
   .section-container{
-    @apply md:flex max-w-5xl mx-auto py-10 rounded-3xl p-4;
-    color: var(--zinc-200);
-    background-color: var(--zinc-500);
+    @apply md:flex max-w-5xl mx-auto py-10 rounded-3xl p-4 text-[var(--zinc-200)] bg-[var(--zinc-500)]
   }
+
+.outlined{
+ @apply md:font-normal ;
+    color: var(--primary-white);
+    text-shadow: var(--outline-width) 0 var(--primary-black),
+    calc(var(--outline-width) * -1) 0 var(--primary-black),
+    0 var(--outline-width) var(--primary-black),
+    0 calc(var(--outline-width) * -1) var(--primary-black),
+    var(--outline-width) var(--outline-width) var(--primary-black),
+    calc(var(--outline-width) * -1) calc(var(--outline-width) * -1)
+      var(--primary-black),
+    var(--outline-width) calc(var(--outline-width) * -1) var(--primary-black),
+    calc(var(--outline-width) * -1) var(--outline-width) var(--primary-black);
+}
 
   /*Header*/
   .header{
@@ -101,8 +114,7 @@ ol {
     
   }
   .header__title{
-    @apply font-bold text-xl;
-    color: var(--primary-black)
+    @apply font-bold text-xl text-[var(--primary-black)]
   }
   .header__toggle{
     @apply md:flex-none w-9 h-9 lg:hidden
@@ -110,17 +122,64 @@ ol {
 
   .header__nav, 
   .header__cta{
-    @apply  md:hidden lg:flex items-center gap-8 
+    @apply md:hidden lg:flex items-center gap-8 
   }
   
   .header__nav ul{
-    @apply md:flex items-center gap-8 font-semibold text-xl
+    @apply  md:flex items-center gap-8 font-semibold text-xl
   }
 
   .header__cta{
-    @apply md:hidden lg:flex bg-black text-xl px-5  py-4 rounded-s gap-2; 
-    color: var(--primary-white);
+    @apply md:hidden lg:flex bg-black text-xl px-5  py-4 rounded-s gap-2 text-[var(--primary-white)];
   }
 
-  
+  /*Hero*/
+.hero{
+  @apply md:flex py-10 px-4 flex-row-reverse items-center justify-center gap-10
+}
+
+.hero__content{
+  @apply md:flex flex-col justify-center gap-8
+}
+
+.hero__title{
+  @apply md:font-normal text-[var(--primary-black)];
+  font-size: clamp(1.25rem, 4.5vw, 2.5rem );
+}
+
+.hero__title strong{
+  @apply md:font-extrabold
+}
+
+.hero__description{
+  @apply md:font-normal text-base  text-[var(--zinc-500)];
+}
+
+.hero__image{
+  @apply  md:w-full h-auto max-h-screen
+}
+
+.hero__social{
+  @apply md:flex gap-6 mt-8
+}
+
+.social__link {
+  @apply md:flex items-center justify-center w-16 h-16 border-2 rounded-s
+         transition-all duration-200 ease-in-out
+         border-[var(--primary-black)]
+         bg-[var(--primary-white)]
+         text-[var(--primary-black)]
+         hover:bg-[var(--primary-black)]
+         hover:text-[var(--primary-white)]
+         hover:-translate-y-0.5
+}
+
+.social__link:hover img {
+  @apply invert;
+}
+
+.social__link img{
+  @apply w-6 h-6
+}
+
 }
