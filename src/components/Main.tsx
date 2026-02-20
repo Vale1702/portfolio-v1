@@ -6,6 +6,8 @@ import twitter from '../assets/twitter.svg'
 
 function Main(){
 return(
+    <main>
+
     <section className='hero'>
         <img className='hero__image' src={hero} alt=" Girl working on a laptop" />
 
@@ -33,6 +35,8 @@ return(
         </div>
 
     </section>
+    <section className="skills"></section>
+    </main>
 )
 }
 

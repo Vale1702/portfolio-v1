@@ -59,16 +59,16 @@ ol {
   /* Error */
   --error-500: #ef4444;
 
-  --outline-width: 1px;
+  --outline-width: 2px;
 
   --max-width: 1280px;
 
 }
 
 @media (min-width: 768px) {
-  /* :root {
+  :root {
     --outline-width: 4px;
-  } */
+  }
 }
 
 @layer base {
@@ -88,7 +88,7 @@ ol {
   }
 
 .outlined{
- @apply md:font-normal ;
+ @apply font-normal;
     color: var(--primary-white);
     text-shadow: var(--outline-width) 0 var(--primary-black),
     calc(var(--outline-width) * -1) 0 var(--primary-black),
@@ -103,68 +103,73 @@ ol {
 
   /*Header*/
   .header{
-    @apply max-w-5xl flex justify-between items-center p-4 mx-auto relative;
+    @apply flex justify-between items-center p-4 max-w-7xl mx-auto relative;
   }
 
-  .header__brant{
+  .header__brand{
     @apply flex items-center gap-3
   }
 
   .header__logo{
     
   }
+
   .header__title{
-    @apply font-bold text-xl text-[var(--primary-black)]
+    @apply  text-xl font-bold text-[var(--primary-black)]
   }
+
   .header__toggle{
     @apply md:flex-none w-9 h-9 lg:hidden
   }
 
   .header__nav, 
   .header__cta{
-    @apply md:hidden lg:flex items-center gap-8 
+    @apply hidden lg:flex items-center gap-8 
   }
   
   .header__nav ul{
-    @apply  md:flex items-center gap-8 font-semibold text-xl
+    @apply flex items-center gap-8 text-xl font-semibold
   }
 
   .header__cta{
-    @apply md:hidden lg:flex bg-black text-xl px-5  py-4 rounded-s gap-2 text-[var(--primary-white)];
+    @apply md:hidden lg:flex text-xl bg-[var(--primary-black)]  px-5  py-4 rounded-s gap-2 text-[var(--primary-white)];
   }
 
   /*Hero*/
 .hero{
-  @apply md:flex py-10 px-4 flex-row-reverse items-center justify-center gap-10
+  @apply flex flex-col items-center  justify-center gap-10 py-10 px-4 
+  md:flex-row-reverse
 }
 
 .hero__content{
-  @apply md:flex flex-col justify-center gap-8
+  @apply flex flex-col justify-center gap-8 md:max-w-[50%]
 }
 
 .hero__title{
-  @apply md:font-normal text-[var(--primary-black)];
-  font-size: clamp(1.25rem, 4.5vw, 2.5rem );
+  @apply font-normal text-[var(--primary-black)];
+  font-size: clamp(1.5rem, 4.5vw, 2.5rem );
 }
 
 .hero__title strong{
-  @apply md:font-extrabold
+  @apply font-extrabold
 }
 
 .hero__description{
-  @apply md:font-normal text-base  text-[var(--zinc-500)];
+  @apply text-base font-normal   text-[var(--zinc-500)];
 }
 
 .hero__image{
-  @apply  md:w-full h-auto max-h-screen
+  @apply  w-full h-auto max-h-[30vh]
+  md:max-h-none md:w-1/2;
 }
 
 .hero__social{
-  @apply md:flex gap-6 mt-8
+  @apply flex gap-6
+  md:flex  mt-8
 }
 
 .social__link {
-  @apply md:flex items-center justify-center w-16 h-16 border-2 rounded-s
+  @apply flex items-center justify-center w-[60px] h-[60px] border-2 rounded-s
          transition-all duration-200 ease-in-out
          border-[var(--primary-black)]
          bg-[var(--primary-white)]
