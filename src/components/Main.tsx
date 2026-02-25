@@ -3,6 +3,20 @@ import facebook from '../assets/facebook.svg'
 import reddit from '../assets/reddit.svg'
 import discord  from '../assets/discord.svg'
 import twitter from '../assets/twitter.svg'
+import ts from '../assets/ts.svg'
+import js from '../assets/js.svg'
+import git from '../assets/git.svg'
+import node from '../assets/node.svg'
+import react from '../assets/react.svg'
+import SkillCard, { type Skill } from './SkillCard'
+
+const skillsData : Skill[]= [
+    {id:1, icon: git, name:"Git"},
+    {id:2, icon: js, name:"JavaScript"},
+    {id:3, icon: ts, name:"TypeScript"},
+    {id:4, icon: node, name:"Nodejs"},
+    {id:5, icon: react, name:"React"}
+]
 
 function Main(){
 return(
@@ -35,7 +49,22 @@ return(
         </div>
 
     </section>
-    <section className="skills"></section>
+    
+    <section className="skills" id="skills">
+        <h2 className='skills__title section-title'>My <strong> Skills </strong></h2>
+        <div className='skills_container'>
+            {skillsData.map((skill) =>(
+                <SkillCard
+                key={skill.id}
+                icon ={skill.icon}
+                name = {skill.name}
+                />
+            ))}
+
+        </div>
+
+    </section>   
+
     </main>
 )
 }

@@ -87,6 +87,7 @@ ol {
     @apply md:flex max-w-5xl mx-auto py-10 rounded-3xl p-4 text-[var(--zinc-200)] bg-[var(--zinc-500)]
   }
 
+  /*General*/
 .outlined{
  @apply font-normal;
     color: var(--primary-white);
@@ -99,6 +100,12 @@ ol {
       var(--primary-black),
     var(--outline-width) calc(var(--outline-width) * -1) var(--primary-black),
     calc(var(--outline-width) * -1) var(--outline-width) var(--primary-black);
+}
+
+.section-title{
+  @apply font-normal text-center;
+  font-size: clamp(1.75rem, 5vw, 2.5rem );
+
 }
 
   /*Header*/
@@ -169,7 +176,8 @@ ol {
 }
 
 .social__link {
-  @apply flex items-center justify-center w-[60px] h-[60px] border-2 rounded-s
+  @apply flex items-center justify-center w-[60px] h-[60px] border-2
+         rounded-s
          transition-all duration-200 ease-in-out
          border-[var(--primary-black)]
          bg-[var(--primary-white)]
@@ -186,5 +194,23 @@ ol {
 .social__link img{
   @apply w-6 h-6
 }
+
+/*Skills*/
+
+.skills{
+  @apply flex flex-col justify-center gap-5
+}
+
+.skill-card{
+  @apply flex flex-col items-center justify-evenly p-6 rounded
+  bg-[var(--primary-white)]
+  rounded-sm 
+  border-[var(--primary-black)]
+  transition-all duration-150 ease-in-out
+  hover:bg-[var(--primary-black)]
+  hover:text-[var(--primary-white)]
+  hover:-translate-y-0.5
+}
+
 
 }
