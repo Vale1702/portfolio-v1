@@ -16,7 +16,8 @@ function SkillCard({ icon, name}: SkillCardProps){
                 <img src={icon} alt={name} />
             </div>
             <p className="skill-card__label">{name}</p>
-        </div>
+   </div>
+    
     )
 }
 

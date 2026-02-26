@@ -176,15 +176,15 @@ ol {
 }
 
 .social__link {
-  @apply flex items-center justify-center w-[60px] h-[60px] border-2
-         rounded-s
-         transition-all duration-200 ease-in-out
-         border-[var(--primary-black)]
-         bg-[var(--primary-white)]
-         text-[var(--primary-black)]
-         hover:bg-[var(--primary-black)]
-         hover:text-[var(--primary-white)]
-         hover:-translate-y-0.5
+  @apply flex items-center justify-center 
+  w-[60px] h-[60px] border-2 rounded-s
+  transition-all duration-200 ease-in-out
+  border-[var(--primary-black)]
+  bg-[var(--primary-white)]
+  text-[var(--primary-black)]
+  hover:bg-[var(--primary-black)]
+  hover:text-[var(--primary-white)]
+  hover:-translate-y-0.5
 }
 
 .social__link:hover img {
@@ -198,19 +198,51 @@ ol {
 /*Skills*/
 
 .skills{
-  @apply flex flex-col justify-center gap-5
+  @apply flex flex-col justify-center gap-5 gap-10 py-10 px-4 
 }
 
 .skill-card{
-  @apply flex flex-col items-center justify-evenly p-6 rounded
+  @apply flex flex-col items-center justify-evenly 
+  rounded-s border-2 p-6 gap-8 
   bg-[var(--primary-white)]
-  rounded-sm 
   border-[var(--primary-black)]
   transition-all duration-150 ease-in-out
   hover:bg-[var(--primary-black)]
   hover:text-[var(--primary-white)]
   hover:-translate-y-0.5
+  aspect-square
 }
 
+.skill-card:hover .skill_card__icon img{
+  @apply invert
+}
+
+.skill-card:hover .skill-card__label{
+  @apply text-[var(primary-white)]
+}
+
+.skill_card__icon img {
+  @apply w-12 h-12 mb-4
+}
+
+.skill-card__label{
+  @apply font-bold text-[var(primary-black)] ;
+  font-size: clamp(1rem, 2vw, 1.25rem );
+}
+.skills__grid{
+  @apply grid gap-5 
+  md:gap-8
+  grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))]
+  lg:grid-cols-[repeat(5,_1fr)]
+}
+
+.skills__grid:nth-child(n + 7){
+  @apply hidden
+  md:flex
+}
+.skills__grid:nth-child(n + 9){
+  @apply hidden
+  lg:flex
+}
 
 }

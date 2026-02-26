@@ -3,20 +3,8 @@ import facebook from '../assets/facebook.svg'
 import reddit from '../assets/reddit.svg'
 import discord  from '../assets/discord.svg'
 import twitter from '../assets/twitter.svg'
-import ts from '../assets/ts.svg'
-import js from '../assets/js.svg'
-import git from '../assets/git.svg'
-import node from '../assets/node.svg'
-import react from '../assets/react.svg'
-import SkillCard, { type Skill } from './SkillCard'
-
-const skillsData : Skill[]= [
-    {id:1, icon: git, name:"Git"},
-    {id:2, icon: js, name:"JavaScript"},
-    {id:3, icon: ts, name:"TypeScript"},
-    {id:4, icon: node, name:"Nodejs"},
-    {id:5, icon: react, name:"React"}
-]
+import SkillCard from './SkillCard'
+import { skillsData } from './data'
 
 function Main(){
 return(
@@ -52,7 +40,7 @@ return(
     
     <section className="skills" id="skills">
         <h2 className='skills__title section-title'>My <strong> Skills </strong></h2>
-        <div className='skills_container'>
+        <div className='skills__grid'>
             {skillsData.map((skill) =>(
                 <SkillCard
                 key={skill.id}
@@ -65,6 +53,21 @@ return(
 
     </section>   
 
+    <section className="experience" id='experience'>
+        <h2 className="experience__title section-title"> My <strong> Experience</strong></h2>
+
+        <div className="experience-card">
+            <div className="experience-card__logo">
+                <img src="" alt="google" />
+            </div>
+        <h3 className="experience-card__role">
+            Lead Software Engineer at Google
+        </h3>
+        <p className="experience-card__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quisquam necessitatibus velit odit aspernatur illum nihil praesentium deleniti dolorem debitis accusantium unde doloremque, provident fugiat, sed pariatur perferendis consequuntur laborum.
+        </p>
+        </div>
+    </section>
     </main>
 )
 }
