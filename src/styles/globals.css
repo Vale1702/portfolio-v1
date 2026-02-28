@@ -230,7 +230,7 @@ ol {
   font-size: clamp(1rem, 2vw, 1.25rem );
 }
 .skills__grid{
-  @apply grid gap-5 
+  @apply grid gap-5
   md:gap-8
   grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))]
   lg:grid-cols-[repeat(5,_1fr)]
@@ -243,6 +243,46 @@ ol {
 .skills__grid:nth-child(n + 9){
   @apply hidden
   lg:flex
+}
+
+.experience{
+  @apply py-10 px-4 bg-[var(--primary-black)] text-[var(--primary-white)] 
+}
+
+.experience-container{ 
+  @apply grid gap-8
+}
+
+.experience-card{
+  @apply 
+  py-8 px-6 gap-8
+  items-center justify-center 
+  rounded-lg 
+  border border-[var(--zinc-500)] 
+  transition-colors duration-300 ease-in-out
+  items-center
+  hover:bg-[var(--zinc-800)]
+
+  grid grid-cols-[32px,_1fr]
+}
+
+.experience-card__logo{
+  @apply font-semibold self-start grid col-start-1 row-start-1 ;
+  font-size: clamp(1.25rem, 2vw, 1.25rem );
+}
+
+.experience-card__role{
+  @apply grid col-start-2 row-start-1
+  text-xl font-semibold self-end
+}
+.experience-card__date{
+  @apply font-semibold text-base text-[var(--zinc-300)]
+  grid col-span-2 
+}
+
+.experience-card__description{
+  @apply leading-6 text-[var(--zinc-300)] 
+  grid col-span-2
 }
 
 }

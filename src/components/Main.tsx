@@ -4,9 +4,13 @@ import reddit from '../assets/reddit.svg'
 import discord  from '../assets/discord.svg'
 import twitter from '../assets/twitter.svg'
 import SkillCard from './SkillCard'
-import { skillsData } from './data'
+import ExperienceCard from './ExperienceCard'
+import { skillsData } from '../data/skills'
+import { experienceData } from '../data/experiences'
+
 
 function Main(){
+
 return(
     <main>
 
@@ -55,19 +59,19 @@ return(
 
     <section className="experience" id='experience'>
         <h2 className="experience__title section-title"> My <strong> Experience</strong></h2>
-
-        <div className="experience-card">
-            <div className="experience-card__logo">
-                <img src="" alt="google" />
-            </div>
-        <h3 className="experience-card__role">
-            Lead Software Engineer at Google
-        </h3>
-        <p className="experience-card__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quisquam necessitatibus velit odit aspernatur illum nihil praesentium deleniti dolorem debitis accusantium unde doloremque, provident fugiat, sed pariatur perferendis consequuntur laborum.
-        </p>
+        <div className='experience-container'> 
+            {experienceData.map((experience) => ( 
+                <ExperienceCard
+                key={experience.id}
+                icon={experience.icon} 
+                name={experience.name} 
+                role={experience.role}
+                date={experience.date} 
+                description={experience.description}        
+                />))}
         </div>
     </section>
+
     </main>
 )
 }

@@ -1,13 +1,6 @@
-export interface Skill{
-    id: number;
-    icon: string;
-    name : string;
-}
+import type { Skill } from "../types/skill"
 
-interface SkillCardProps{
-    icon:string;
-    name: string;
-}
+type SkillCardProps = Omit<Skill, 'id'>
 
 function SkillCard({ icon, name}: SkillCardProps){
     return(
