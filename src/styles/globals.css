@@ -83,10 +83,7 @@ ol {
     @apply m-4;
   }
 
-  .section-container{
-    @apply md:flex max-w-5xl mx-auto py-10 rounded-3xl p-4 text-[var(--zinc-200)] bg-[var(--zinc-500)]
-  }
-
+  
   /*General*/
 .outlined{
  @apply font-normal;
@@ -106,6 +103,10 @@ ol {
   @apply font-normal text-center;
   font-size: clamp(1.75rem, 5vw, 2.5rem );
 
+}
+
+.section-container{
+  @apply py-10 px-4 m-auto max-w-[var(--max-width)] w-full
 }
 
   /*Header*/
@@ -144,12 +145,13 @@ ol {
 
   /*Hero*/
 .hero{
-  @apply flex flex-col items-center  justify-center gap-10 py-10 px-4 
-  md:flex-row-reverse
+  @apply flex flex-col items-center justify-center gap-10
+   md:flex-row-reverse
 }
 
 .hero__content{
-  @apply flex flex-col justify-center gap-8 md:max-w-[50%]
+  @apply flex flex-col justify-center gap-8 
+  md:w-1/2;
 }
 
 .hero__title{
@@ -162,7 +164,7 @@ ol {
 }
 
 .hero__description{
-  @apply text-base font-normal   text-[var(--zinc-500)];
+  @apply text-base font-normal text-[var(--zinc-500)];
 }
 
 .hero__image{
@@ -171,8 +173,7 @@ ol {
 }
 
 .hero__social{
-  @apply flex gap-6
-  md:flex  mt-8
+  @apply flex gap-6 mt-8
 }
 
 .social__link {
@@ -198,19 +199,20 @@ ol {
 /*Skills*/
 
 .skills{
-  @apply flex flex-col justify-center gap-5 gap-10 py-10 px-4 
+  @apply flex flex-col justify-center gap-5 
 }
 
 .skill-card{
   @apply flex flex-col items-center justify-evenly 
-  rounded-s border-2 p-6 gap-8 
+  p-6 
+  rounded border-2 
   bg-[var(--primary-white)]
   border-[var(--primary-black)]
-  transition-all duration-150 ease-in-out
+  aspect-square
+  transition-transform transition-colors duration-150 ease-in-out
   hover:bg-[var(--primary-black)]
   hover:text-[var(--primary-white)]
   hover:-translate-y-0.5
-  aspect-square
 }
 
 .skill-card:hover .skill_card__icon img{
@@ -218,7 +220,7 @@ ol {
 }
 
 .skill-card:hover .skill-card__label{
-  @apply text-[var(primary-white)]
+  @apply text-[var(--primary-white)]
 }
 
 .skill_card__icon img {
@@ -230,20 +232,12 @@ ol {
   font-size: clamp(1rem, 2vw, 1.25rem );
 }
 .skills__grid{
-  @apply grid gap-5
-  md:gap-8
-  grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))]
-  lg:grid-cols-[repeat(5,_1fr)]
+  @apply grid grid-cols-2 gap-5 
+  md:grid-cols-4 md:gap-8
+  lg:grid-cols-5
 }
 
-.skills__grid:nth-child(n + 7){
-  @apply hidden
-  md:flex
-}
-.skills__grid:nth-child(n + 9){
-  @apply hidden
-  lg:flex
-}
+/*Experience*/
 
 .experience{
   @apply py-10 px-4 bg-[var(--primary-black)] text-[var(--primary-white)] 
@@ -256,33 +250,33 @@ ol {
 .experience-card{
   @apply 
   py-8 px-6 gap-8
-  items-center justify-center 
+  items-center
   rounded-lg 
   border border-[var(--zinc-500)] 
   transition-colors duration-300 ease-in-out
-  items-center
-  hover:bg-[var(--zinc-800)]
-
+  
   grid grid-cols-[32px,_1fr]
+  hover:bg-[var(--zinc-800)]
+  md:grid-cols-[32px,_1fr,auto]
 }
 
 .experience-card__logo{
-  @apply font-semibold self-start grid col-start-1 row-start-1 ;
-  font-size: clamp(1.25rem, 2vw, 1.25rem );
+  @apply w-full ;
 }
 
 .experience-card__role{
-  @apply grid col-start-2 row-start-1
-  text-xl font-semibold self-end
+  @apply text-xl font-semibold 
 }
 .experience-card__date{
   @apply font-semibold text-base text-[var(--zinc-300)]
-  grid col-span-2 
+  col-span-2 
+  md:col-start-3 md:col-span-1 md:row-start-1
 }
 
 .experience-card__description{
   @apply leading-6 text-[var(--zinc-300)] 
-  grid col-span-2
+  col-span-2
+  md:col-span-3
 }
 
 }
