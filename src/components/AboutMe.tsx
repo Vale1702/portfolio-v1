@@ -2,7 +2,7 @@ import type { AboutMe } from "../types/aboutme";
 
 type AboutProps = Omit <AboutMe, 'id'>
 
-function Aboutme( {icon, name, index, text}: AboutProps){
+function Aboutme( {icon, name, descriptions}: AboutProps){
     return(
     <div className="about__content">
         <div className="about__image-wrapper">
@@ -10,10 +10,11 @@ function Aboutme( {icon, name, index, text}: AboutProps){
             </div>
             <h2 className="section-title about__title "> About  <strong> Me </strong> </h2>
             <div className="about__text">
-            <p key={index}>{text}</p>
+                {descriptions.map((text, index) =>(
+                 <p key={index}>{text}</p>
+                ))}
             </div>
         </div>
-    
     )
 }
 

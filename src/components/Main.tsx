@@ -80,18 +80,17 @@ return(
     <section className='about' id='about'>
         <div className='section-container '>
             <div className="about__container">
-                    {aboutData..descriptions.map((text, about) => (
-                        <Aboutme
-                        icon={about.icon}
-                        name={about.name}
-                        descriptions={text.descriptions}
-                        />
-                    ))}
-                    
+                {aboutData.map((about, index) =>(
+                    <Aboutme
+                    key={index}
+                    icon={about.icon}
+                    name={about.name}
+                    descriptions={about.descriptions}
+                    />
+                ))}
             </div>
         </div>
     </section>
-
     </main>
 )
 }
