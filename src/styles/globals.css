@@ -69,6 +69,18 @@ ol {
   :root {
     --outline-width: 4px;
   }
+  .skill-card:nth-child(n + 7){
+    display: flex;
+  }
+  .skill-card:nth-child(n + 9){
+    display: none;
+  }
+}
+
+@media (min-width: 1024px){
+  .skill-card:nth-child(n + 9){
+    display: flex
+  }
 }
 
 @layer base {
@@ -118,9 +130,9 @@ ol {
     @apply flex items-center gap-3
   }
 
-  .header__logo{
+  /* .header__logo{
     
-  }
+  } */
 
   .header__title{
     @apply  text-xl font-bold text-[var(--primary-black)]
@@ -237,6 +249,9 @@ ol {
   lg:grid-cols-5
 }
 
+.skill-card:nth-child(n + 7){
+  @apply  hidden
+}
 /*Experience*/
 
 .experience{
@@ -279,14 +294,32 @@ ol {
   md:col-span-3
 }
 
-.about{
-
-}
-.container{
-
-}
+/*About Me*/
 .about__container{
+  @apply flex flex-col items-center gap-10
+  md:flex-row md:items-start md:justify-between md:gap-10
+}
 
+.about__image-wrapper{
+  @apply w-full flex justify-center
+  md:flex-1 md:justify-center
+}
+
+.about__image{
+  @apply w-full h-auto max-h-[30vh]
+  md:max-h-[40vh] md:w-1/2
+}
+
+.about__content{
+  @apply w-full flex flex-col gap-6 
+  md:flex-1
+}
+.about__title{
+  @apply text-left
+}
+
+.about__text{
+  @apply flex flex-col gap-4 text-base text-[var(--zinc-500)]
 }
 
 }
