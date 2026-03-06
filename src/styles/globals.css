@@ -296,30 +296,31 @@ ol {
 
 /*About Me*/
 .about__container{
-  @apply flex flex-col items-center gap-10
-  md:flex-row md:items-start md:justify-between md:gap-10
+  @apply flex flex-col items-center gap-10 
+  md:flex-row md:items-start md:justify-between 
 }
 
 .about__image-wrapper{
-  @apply w-full flex justify-center
-  md:flex-1 md:justify-center
+  @apply w-full flex justify-center 
+  md:w-1/2
 }
 
 .about__image{
-  @apply w-full h-auto max-h-[30vh]
-  md:max-h-[40vh] md:w-1/2
+  @apply w-full h-auto max-h-[30vh] 
+  md:max-h-[40vh] ;
 }
 
 .about__content{
   @apply w-full flex flex-col gap-6 
-  md:flex-1
+  md:w-1/2 md:max-w-[580px]
 }
+
 .about__title{
   @apply text-left
 }
 
 .about__text{
-  @apply flex flex-col gap-4 text-base text-[var(--zinc-500)]
+  @apply flex flex-col gap-4 text-base leading-6  text-[var(--zinc-500)]
 }
 
 }
