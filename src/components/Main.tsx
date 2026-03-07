@@ -9,6 +9,8 @@ import { skillsData } from '../data/skills'
 import { experienceData } from '../data/experiences'
 import {aboutData} from '../data/about-me'
 import Aboutme from './AboutMe'
+import { projectData } from '../data/projects'
+import Projects from './Project'
 
 
 function Main(){
@@ -92,19 +94,22 @@ return(
 
     <section className='projects' id='projects'>
         <div className='section-container'>
-        <h2 className='section-title'> My <strong>Projects </strong></h2>
+            <h2 className='section-title'> My <strong>Projects </strong></h2>
+            <div className="project-list">
+
+                {projectData.map((project)=>(
+                    <Projects
+                    key={project.id}
+                    icon={project.icon} 
+                    name={project.name} 
+                    number={project.number}
+                    title={project.title} 
+                    descriptions={project.descriptions}
+                    link={project.link}
+                    />
+                ))}
+                </div>
         </div>
-        <article className='project-card'>
-            <div className='project-card__image-wrapper'>
-            <img className='project-card__image' src="/" alt="icon" />
-            </div>
-        <div className='project-card__content'>
-            <span className='project-card__number'> 01 </span>
-            <h3 className='project-card__title'>Crypto Screener Application</h3>
-            <p className='project-card__description'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis nam in nisi doloremque odit? Aspernatur, maxime officia! Incidunt dolore minima voluptas ex unde nemo omnis! Laborum acorrupti recusandae nemo?</p>
-            <a href="#" className='project-card__link' aria-label=''></a>
-        </div>
-        </article>
     </section>
     </main>
 )

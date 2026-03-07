@@ -94,7 +94,6 @@ ol {
   .container-home{
     @apply m-4;
   }
-
   
   /*General*/
 .outlined{
@@ -322,5 +321,69 @@ ol {
 .about__text{
   @apply flex flex-col gap-4 text-base leading-6  text-[var(--zinc-500)]
 }
+
+/*Projects */
+
+
+.projects{
+  @apply bg-[var(--primary-black)] text-[var(--primary-white)];
+}
+
+
+.projects__title{
+  @apply mb-8 text-[var(--primary-white)];
+}
+
+.project-card{
+  @apply flex flex-col gap-7 
+}
+
+.project-card__image-wrapper{
+  @apply w-full rounded-[10px] overflow-hidden
+}
+
+.project-card__image{
+  @apply w-full h-auto block
+}
+
+.project-card__content{
+  @apply flex flex-col gap-6 justify-center
+  /* md:w-1/2; */
+}
+
+.project-card__number{
+  @apply font-extrabold leading-4;
+  font-size: clamp(1.5rem, 3vw, 2rem );
+}
+
+.project-card__title{
+  @apply font-extrabold leading-5;
+  font-size: clamp(1.25rem, 2.75vw, 1.75rem );
+}
+
+.project-card__description{
+@apply leading-6 text-[var(--zinc-300)];
+}
+
+.project-card__link{
+@apply mt-2
+}
+
+.project-list{
+  container-type: inline-size;
+  container-name: project-list;
+}
+
+@container project-list (min-width:700px){
+
+  .project-card{
+    flex-direction: row;
+  }
+
+  .project-card:nth-child(even){
+    flex-direction: row-reverse;
+  }
+}
+
 
 }
