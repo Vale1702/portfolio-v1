@@ -2,18 +2,15 @@ import type { Project } from "../types/project";
 
 type ProjectProps = Omit <Project,"id">
 
-function Projects ({ icon, name, number, title, descriptions, link}: ProjectProps){
+function Projects ({ imageWebp, imageJpg, name, number, title, descriptions, link}: ProjectProps){
     return(
         <>
                 <article className='project-card'>
             <div className='project-card__image-wrapper'>
                 <picture>
-                    <source srcSet={icon} type ="image/web"/>
+                    <source srcSet={imageWebp} type ="image/webp"/>
                     <img className='project-card__image' 
-                    src={icon} alt={name}
-                    // srcSet="https://res.cloudinary,
-                    // https://res.cloudinary,
-                    // https://res.cloudinary"
+                    src={imageJpg} alt={name}
                     loading="lazy"
                     />
                 </picture>

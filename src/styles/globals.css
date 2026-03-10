@@ -348,7 +348,7 @@ ol {
 
 .project-card__content{
   @apply flex flex-col gap-6 justify-center
-  /* md:w-1/2; */
+  md:w-1/2;
 }
 
 .project-card__number{
@@ -366,7 +366,7 @@ ol {
 }
 
 .project-card__link{
-@apply mt-2
+@apply my-2
 }
 
 .project-list{

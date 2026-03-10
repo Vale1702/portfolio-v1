@@ -99,8 +99,9 @@ return(
 
                 {projectData.map((project)=>(
                     <Projects
-                    key={project.id}
-                    icon={project.icon} 
+                    key={project.id} 
+                    imageWebp={project.imageWebp}
+                    imageJpg={project.imageJpg}
                     name={project.name} 
                     number={project.number}
                     title={project.title} 

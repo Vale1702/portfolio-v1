@@ -1,6 +1,7 @@
 export interface Project{
     id:number;
-    icon:string;
+    imageWebp:string,
+    imageJpg: string,
     name:string;
     number:string;
     title:string;
