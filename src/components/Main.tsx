@@ -20,7 +20,9 @@ return(
 
     <section className="section-container">
         <div className= 'hero'>
-        <img className='hero__image' src={hero} alt=" Girl working on a laptop" />
+        <img className='hero__image' src={hero} alt=" Girl working on a laptop"
+        fetchPriority='high'
+        />
 
             <div className='hero__content'>
                 <h1 className='hero__title'> Hello i'm <strong>Flora Sheen </strong> <br/> 
@@ -112,6 +114,8 @@ return(
                 </div>
         </div>
     </section>
+
+    <section className="testimonal"></section>
     </main>
 )
 }

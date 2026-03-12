@@ -6,7 +6,7 @@ function Aboutme( {icon, name, descriptions}: AboutProps){
     return(
         <>
             <div className="about__image-wrapper">
-                <img className="about__image" src={icon} alt={name} />
+                <img className="about__image" src={icon} alt={name}  loading="lazy"/>
             </div>
                     
             <div className="about__content">
