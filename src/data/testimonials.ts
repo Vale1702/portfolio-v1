@@ -7,15 +7,13 @@ export const testimonialData: Testimonial[] = [{
     descriptions : 'I recently had to jump on 10+ different calls across eight different countries to find the right owner.' ,
     name :'Evren Shah'  ,
     role :'Designer'  ,
-},
-{
+    },
+    {
     id :2  ,
     imageWebp : '' ,
     icon : quote ,
     descriptions : 'I recently had to jump on 10+ different calls across eight different countries to find the right owner.' ,
-    name :'Evren Shah'  ,
+    name :'Flora sheen'  ,
     role :'Designer'  ,
-}
-
-
+    }
 ]

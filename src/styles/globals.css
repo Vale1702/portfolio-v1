@@ -385,5 +385,29 @@ ol {
   }
 }
 
+/*Testimonial*/
+
+.testimonial-container{
+  @apply flex flex-col gap-10 p-6 
+}
+.testimonial-card{
+  @apply flex flex-col gap-6 p-6
+  justify-center items-center
+  rounded-3xl 
+  shadow-lg
+  relative
+}
+.testimonial-card__logo{
+  @apply w-24 h-24 absolute right-3 
+}
+.testimonial-card__description{
+  @apply font-normal text-base text-[var(--primary-neutral)]
+}
+.testimonial-card__name{
+  @apply font-semibold text-xl
+}
+.testimonial-card__role{
+  @apply font-semibold text-[var(--zinc-500)]
+}
 
 }

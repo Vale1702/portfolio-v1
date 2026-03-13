@@ -11,6 +11,8 @@ import {aboutData} from '../data/about-me'
 import Aboutme from './AboutMe'
 import { projectData } from '../data/projects'
 import Projects from './Project'
+import TestimonialCard from './TestimonialCard'
+import { testimonialData } from '../data/testimonials'
 
 
 function Main(){
@@ -115,7 +117,23 @@ return(
         </div>
     </section>
 
-    <section className="testimonal"></section>
+    <section className="testimonial">
+        <div className="section-container">
+            <h2 className="section-title"> My <strong> Testimonial</strong> </h2>
+            <div className='testimonial-container'>
+                {testimonialData.map((testimonial)=>(
+                    <TestimonialCard
+                    key ={testimonial.id}
+                    imageWebp ={testimonial.imageWebp}
+                    icon ={testimonial.icon}
+                    descriptions ={testimonial.descriptions}
+                    name ={testimonial.name}
+                    role ={testimonial.role}
+                    />
+                ))}
+            </div>
+        </div>
+    </section>
     </main>
 )
 }
