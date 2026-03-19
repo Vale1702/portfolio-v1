@@ -1,7 +1,7 @@
 export interface Project{
     id:number;
     imageWebp:string,
-    imageJpg: string,
+    imageJpg: string[],
     name:string;
     number:string;
     title:string;

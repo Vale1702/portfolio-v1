@@ -117,16 +117,16 @@ return(
         </div>
     </section>
 
-    <section className="testimonial">
+    <section className="testimonials" id="testimonials">
         <div className="section-container">
-            <h2 className="section-title"> My <strong> Testimonial</strong> </h2>
-            <div className='testimonial-container'>
+            <h2 className="testimonials__title section-title"> My <strong> Testimonial</strong> </h2>
+            <div className='testimonial-list'>
                 {testimonialData.map((testimonial)=>(
                     <TestimonialCard
                     key ={testimonial.id}
                     imageWebp ={testimonial.imageWebp}
                     icon ={testimonial.icon}
-                    descriptions ={testimonial.descriptions}
+                    text ={testimonial.text}
                     name ={testimonial.name}
                     role ={testimonial.role}
                     />
