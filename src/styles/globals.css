@@ -389,27 +389,59 @@ ol {
 
 
 .testimonial-list{
-  @apply flex flex-col gap-10 p-6 
+  @apply flex flex-col gap-10 mt-10
+  md:flex-row md:justify-center md:items-stretch
 }
 .testimonial-card{
-  @apply flex flex-col gap-6 p-6
-  justify-center items-center
-  rounded-3xl 
-  shadow-lg
-  relative
-}
-.testimonial-card__logo{
-  @apply w-24 h-24 absolute right-3 flex flex-col justify-center items-center
+  @apply flex flex-col gap-6 p-10
+  items-center text-center
+  rounded-3xl shadow-lg 
+  bg-[var(--primary-white)]
+  transition-all duration-200 ease-in-out
+  hover:bg-[var(--primary-black)]
+  hover:text-[var(--primary-white)]
+  hover:shadow-lg
+
+  md:flex-1 md:max-w-96
 }
 
-.testimonial-card__description{
-  @apply font-normal text-base text-[var(--primary-neutral)]
+.testimonial-card__header{
+  @apply relative inline-block
+}
+
+/* .testimonial-card__logo{
+  @apply w-24 h-24  right-3 flex flex-col justify-center items-center  border rounded-full
+} */
+.testimonial-card__quote-icon{
+   @apply absolute bottom-0 right-0 w-[30px] h-[30px]
+   group-hover:invert
+}
+.testimonial-card__avatar{
+  @apply w-24 h-24 rounded-[50%]
+  object-cover
+}
+
+.testimonial-card__text{
+  @apply text-base text-[var(--zinc-500)] 
+  max-w-[400px]
+  group-hover:text-[var(--zinc-300)]
+}
+
+.testimonial-card__footer{
+  @apply flex flex-col gap-1 relative
+  before:content-['']
+  before:block
+  before:w-[120px]
+  before:h-[2px]
+  before:bg-[var(--primary-black)]
+  before:m-auto before:mt-0 before:mb-4 
+  group-hover:before:bg-[var(--primary-white)]
 }
 .testimonial-card__name{
-  @apply font-semibold text-xl
+  @apply font-bold text-xl
 }
 .testimonial-card__role{
-  @apply font-semibold text-[var(--zinc-500)]
+  @apply text-base text-[var(--zinc-500)]
 }
 
 }
