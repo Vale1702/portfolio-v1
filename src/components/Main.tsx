@@ -124,7 +124,7 @@ return(
                 {testimonialData.map((testimonial)=>(
                     <TestimonialCard
                     key ={testimonial.id}
-                    imageWebp ={testimonial.imageWebp}
+                    imageJpg ={testimonial.imageJpg}
                     icon ={testimonial.icon}
                     text ={testimonial.text}
                     name ={testimonial.name}

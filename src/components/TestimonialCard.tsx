@@ -2,16 +2,25 @@ import type { Testimonial } from "../types/testimonial";
 
 type TestimonialCardProps = Omit<Testimonial, "id">
 
-function TestimonialCard ({imageWebp, icon, text, name, role}:TestimonialCardProps){
+function TestimonialCard ({imageJpg, icon, text, name, role}:TestimonialCardProps){
+    
     return(
         <div className="testimonial-card group">
             <div className="testimonial-card__header">
                 <picture className="testimonial-card__logo">
-                    <source 
-                    type ="image/webp"
-                    />
-                    <img src={imageWebp} alt={name} className="testimonial-card__avatar"
-                    loading="lazy"/>
+                    <source/>
+                    {imageJpg?.[0] && (
+
+                        <img src={imageJpg[0]} 
+                        alt={name} className="testimonial-card__avatar"
+                        loading="lazy"
+                        srcSet={`
+                            ${imageJpg[0]} 100w,
+                            ${imageJpg[1]} 200w
+                            `}
+                            sizes="(max-width: 768px) 100px, 200px"
+                            />
+                        )}
                 </picture>
                 <img src={icon} alt="Quote" className="testimonial-card__quote-icon" 
                 /> 

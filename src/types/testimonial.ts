@@ -1,6 +1,6 @@
 export interface Testimonial{
     id:number;
-    imageWebp:string,
+    imageJpg:string[],
     icon: string,
     text:string;
     name:string;
