@@ -4,6 +4,7 @@ import js from '../assets/js.svg'
 import git from '../assets/git.svg'
 import node from '../assets/node.svg'
 import react from '../assets/react.svg'
+import tailwind from '../assets/tailwind.svg'
 
 export const skillsData :Skill[]= [
     {id:1, icon: git, name:"Git"},
@@ -11,7 +12,7 @@ export const skillsData :Skill[]= [
     {id:3, icon: ts, name:"TypeScript"},
     {id:4, icon: node, name:"Nodejs"},
     {id:5, icon: react, name:"React"},
-    {id:6, icon: git, name:"Git"},
+    {id:6, icon: tailwind, name:"Tailwind"},
     {id:7, icon: js, name:"JavaScript"},
     {id:8, icon: ts, name:"TypeScript"},
     {id:9, icon: node, name:"Nodejs"},

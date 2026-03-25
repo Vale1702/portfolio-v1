@@ -27,11 +27,11 @@ return(
         />
 
             <div className='hero__content'>
-                <h1 className='hero__title'> Hello i'm <strong>Flora Sheen </strong> <br/> 
-                Fronted <span className='outlined'> Developer </span><br/> base in <strong>India. </strong>
+                <h1 className='hero__title'> Hello i'm <strong>Valentina Llorente </strong> <br/> 
+                Fronted <span className='outlined'> Developer </span><br/> Based in <strong>México. </strong>
                 </h1>
                     <p className='hero__description'>
-                        I'm Flora Sheen Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.
+                        Desarrolladora frontend enfocada en crear interfaces modernas, responsivas y funcionales con React, TypeScript y Tailwind.
                     </p>
                 <div className='hero__social'>
                     <a href="#" className='social__link' aria-label='facebook'>
